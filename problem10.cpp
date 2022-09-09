@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-int main ()
+int main ()   //code obtained from the code samples of the in4150 coursepage
 {
   // Start measuring time
   clock_t t1 = clock();
