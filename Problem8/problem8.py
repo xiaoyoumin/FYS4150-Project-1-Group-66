@@ -36,7 +36,7 @@ def abs_error(u, v):                    #calculates the absolute error
 
     log10delta = np.zeros(len(u))
     for i in range(0, len(u)):
-        log10delta[i] = log10(abs(u[i] - v[i]))
+        log10delta = log10(abs(u[i] - v[i]))
         
     return log10delta
 
@@ -49,8 +49,8 @@ def rel_error(u, v):                    #calculates relative error
 
     return log10eps
 
-real = rel_error(u, v)
-absolute_vodka = abs_error()
+real = rel_error(u, x)
+absolute_vodka = abs_error(u, x)
 
 fig, axs = plt.subplots(2)
 fig.suptitle('Vertically stacked subplots')
