@@ -15,7 +15,7 @@ double f_func(double h, double x){
 
 vector<double> g_func(int n, double h, vector<double> x){ 
     vector<double> g1;
-    for (int i=0; i<=n; i++){
+    for (int i=0; i<=n-1; i++){
         g1.push_back(f_func(h, x[i]));
     }
     return g1;
@@ -55,15 +55,12 @@ vector<double> Sub(vector<double> a, vector<double> b, vector<double> c, vector<
 
     bt.push_back(b[0]);
     for (int i=1; i<=b.size()-1;i++){
-        bt.push_back(b[i]-a[i]*c[i-1]/b[i-1]);
+        bt.push_back(b[i]-a[i-1]*c[i-1]/b[i-1]);
     }
 
     gt.push_back(g.at(0));
     for (int i=1; i<=n-1;i++){
-        gt.push_back(g.at(i)-a[i]*g.at(i-1)/b[i-1]);
-    }
-    for (int i=0; i<=n-1;i++){
-        a[i]=0;
+        gt.push_back(g.at(i)-a[i-1]*g.at(i-1)/b[i-1]);
     }
 
     //Back substitution
