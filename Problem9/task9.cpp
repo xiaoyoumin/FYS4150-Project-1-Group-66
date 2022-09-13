@@ -69,11 +69,11 @@ void writeVX(int n){//starts the code by initializing the v vector and writing i
 int main()
 {
 
-  writeVX(10);
+  //writeVX(10);
 
-  writeVX(100);
+  //writeVX(100);
 
-  writeVX(1000);
+  //writeVX(1000);
 
   cout << "Code Finished!";
 
