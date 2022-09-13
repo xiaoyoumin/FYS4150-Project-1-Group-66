@@ -13,19 +13,16 @@ int main()
     vector<double> u;
     float i;
     
-    for(i=0; i<=1; i+=0.01)
-        x.push_back(i);
+    for(i=0; i<=100; i++)
+        x.push_back(i/100);
 
-    ofstream filex("problem2_x.txt", ios::app);
-    ofstream fileu("problem2_u.txt", ios::app);
 
-    for(i=0; i < x.size(); i++)
+    ofstream file("problem2.txt", ios::app);
+    for(i=0; i<101; i++)
     {
         u.push_back(Calc_ux(x[i]));
 
-        filex << x[i] <<" ";
-        fileu << u[i] <<" ";
-        
+        file << x[i] <<"\t" << u[i] <<"\n";
     }
     
     return 0;
