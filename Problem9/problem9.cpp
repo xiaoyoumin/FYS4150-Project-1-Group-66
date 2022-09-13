@@ -28,7 +28,7 @@ int simp_Thom_algr(int n, vector<double> g, vector<double> &v)
 
 int main()
 {
-    for(int n_step = 10; n_step <1001;n_step = n_step*10)
+    for(int n_step = 10; n_step <10000001;n_step = n_step*10)
     {
         int n = n_step-1;
         int i;

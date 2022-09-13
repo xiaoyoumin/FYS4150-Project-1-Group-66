@@ -61,6 +61,7 @@ int main()
     write(10);
     write(100);
     write(1000);
+    write(10000);
 
     return 0;
 }
