@@ -3,10 +3,14 @@ import numpy as np
 def func(x):
     return 1-(1-np.exp(-10))*x-np.exp(-10*x)
 def plotting(n):
-    with open(f"problem9_v{n}.txt") as f:
-        v=[float(x) for x in f.readlines()[0].split()]
-    with open(f"problem9_x{n}.txt") as f:
-        x=[float(x) for x in f.readlines()[0].split()]
+    with open(f"problem7_{n}.txt") as f:
+        lines = f.readlines()
+        x = []
+        v = []
+        for line in lines:
+            vals = line.split("\t")
+            x.append(float(vals[0]))
+            v.append(float(vals[1]))
     plt.plot(x,v,label=f"{n} steps")
     #plt.axis("equal")
 plotting(10)

@@ -48,13 +48,11 @@ int write(int n_step){
         return 0;
     }
 
-    ofstream filex("problem9_x"+to_string(n_step)+".txt", ios::app);
-    ofstream fileu("problem9_v"+to_string(n_step)+".txt", ios::app);
+    ofstream file("problem7_"+to_string(n_step)+".txt", ios::app);
     for(i=0; i<n_step+1; i++)
     {
         x[i] = i*h;
-        filex << x[i] <<" ";
-        fileu << v[i] <<" ";
+        file << x[i] <<"\t" << v[i] <<"\n";
     }
     return 0;
 }
